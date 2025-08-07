@@ -1,69 +1,100 @@
 <!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help Me Get a PS5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #121212;
-      color: #fff;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0d1117;
+      color: #ffffff;
       text-align: center;
-      padding: 2rem;
+      padding: 20px;
     }
-    h1 {
-      font-size: 2.5rem;
+    header {
+      padding: 30px 20px 10px;
+    }
+    header h1 {
+      font-size: 2.8em;
       color: #ff4c4c;
+      margin-bottom: 10px;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .images img {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     }
     p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 1rem auto;
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 20px auto;
     }
-    .donate {
-      margin-top: 2rem;
+    .upi-box {
+      background: #161b22;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      display: inline-block;
     }
-    .donate input {
-      padding: 0.5rem;
-      font-size: 1rem;
-      width: 300px;
-      max-width: 90%;
-      border-radius: 5px;
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1em;
+      width: 100%;
       border: none;
+      border-radius: 5px;
+      background: #fff;
+      color: #000;
+      margin-bottom: 10px;
     }
-    .donate button {
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
-      background: #ff4c4c;
+    button {
+      padding: 10px 20px;
+      background-color: #ff4c4c;
       color: white;
       border: none;
       border-radius: 5px;
-      margin-top: 1rem;
+      font-size: 1em;
       cursor: pointer;
     }
-    .donate button:hover {
-      background: #e03e3e;
-    }
-    .footer {
-      margin-top: 4rem;
-      font-size: 0.8rem;
-      color: #aaa;
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <h1>Help Me Get a PS5 🎮</h1>
-  <p>
-    Gaming is more than just a hobby — it's my escape and my passion. I've always dreamed of owning a PS5, but I can't afford it right now. If you'd like to support that dream, every small donation counts.
-  </p>
-  <div class="donate">
-    <p><strong>Donate via UPI:</strong></p>
-    <input type="text" value="yourupi@okbank" readonly onclick="this.select(); document.execCommand('copy')" />
-    <p>Tap to copy — Thank you so much! 🙏</p>
-    <button onclick="alert('Thank you for your support!')">I Donated</button>
-  </div>
-  <div class="footer">
-    Made with ❤️ by [Your Name]. Every share helps!
-  </div>
-</body>
+  <header>
+    <h1>Help Me Get a PS5 🎮</h1>
+    <p>Gaming isn't just a hobby — it's my escape, my therapy, and my passion. A PS5 has always been my dream, but right now it's out of reach financially. If you want to support my journey, even the smallest donation means a lot. 🙏</p>
+  </header>  <div class="images">
+    <img src="https://m.media-amazon.com/images/I/61vYgM0DhrL._SL1500_.jpg" alt="PS5 Console">
+    <img src="https://m.media-amazon.com/images/I/61sGfVYtrcL._SL1500_.jpg" alt="PS5 Controller">
+    <img src="https://m.media-amazon.com/images/I/81LJNNdrqnL._SL1500_.jpg" alt="PS5 Setup">
+    <img src="https://m.media-amazon.com/images/I/71vLQ4bHSDL._SL1500_.jpg" alt="PS5 Bundle">
+  </div>  <div class="upi-box">
+    <h2>Donate via UPI</h2>
+    <input type="text" value="rahul173558@oksbi" id="upi" readonly onclick="copyUPI()">
+    <button onclick="copyUPI()">Tap to Copy UPI ID</button>
+    <p>Thank you for your support! ❤️</p>
+  </div>  <footer>
+    <p>Made with ❤️ by Rhoxeet. Every share counts!</p>
+  </footer>  <script>
+    function copyUPI() {
+      const upi = document.getElementById("upi");
+      upi.select();
+      upi.setSelectionRange(0, 99999); // For mobile
+      navigator.clipboard.writeText(upi.value).then(() => {
+        alert("UPI ID copied to clipboard! 🎉");
+      });
+    }
+  </script></body>
 </html>
