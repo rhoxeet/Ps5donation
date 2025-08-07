@@ -1,100 +1,125 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Help Me Get a PS5</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
+      background-color: #0e0e0e;
+      color: white;
       font-family: 'Roboto', sans-serif;
-      background-color: #0d1117;
-      color: #ffffff;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding: 20px;
     }
-    header {
-      padding: 30px 20px 10px;
+
+    h1 {
+      color: #ff4d4d;
+      font-size: 2.5em;
+      margin-top: 30px;
     }
-    header h1 {
-      font-size: 2.8em;
-      color: #ff4c4c;
-      margin-bottom: 10px;
+
+    p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.1em;
+      line-height: 1.6;
     }
+
     .images {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
-      margin: 20px 0;
+      margin: 30px 0;
     }
+
     .images img {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
     }
-    p {
-      font-size: 1.1em;
-      max-width: 800px;
-      margin: 20px auto;
+
+    .images img:hover {
+      transform: scale(1.05);
     }
+
     .upi-box {
-      background: #161b22;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
-      display: inline-block;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: 40px auto;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
-    input[type="text"] {
+
+    input {
+      width: 90%;
       padding: 10px;
-      font-size: 1em;
-      width: 100%;
+      font-size: 1.1em;
       border: none;
-      border-radius: 5px;
-      background: #fff;
-      color: #000;
-      margin-bottom: 10px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      text-align: center;
     }
+
     button {
       padding: 10px 20px;
-      background-color: #ff4c4c;
+      background-color: #ff4d4d;
       color: white;
       border: none;
-      border-radius: 5px;
-      font-size: 1em;
+      border-radius: 6px;
       cursor: pointer;
+      font-size: 1em;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #999;
+
+    button:hover {
+      background-color: #e53935;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.95em;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Help Me Get a PS5 🎮</h1>
-    <p>Gaming isn't just a hobby — it's my escape, my therapy, and my passion. A PS5 has always been my dream, but right now it's out of reach financially. If you want to support my journey, even the smallest donation means a lot. 🙏</p>
-  </header>  <div class="images">
-    <img src="https://m.media-amazon.com/images/I/61vYgM0DhrL._SL1500_.jpg" alt="PS5 Console">
-    <img src="https://m.media-amazon.com/images/I/61sGfVYtrcL._SL1500_.jpg" alt="PS5 Controller">
-    <img src="https://m.media-amazon.com/images/I/81LJNNdrqnL._SL1500_.jpg" alt="PS5 Setup">
-    <img src="https://m.media-amazon.com/images/I/71vLQ4bHSDL._SL1500_.jpg" alt="PS5 Bundle">
-  </div>  <div class="upi-box">
+
+  <h1>Help Me Get a PS5 🎮</h1>
+  <p>
+    Gaming isn't just a hobby — it's my escape, therapy, and passion.  
+    A PS5 has always been my dream, but right now it's financially out of reach.  
+    If you'd like to support me, even a small donation means the world. 🙏
+  </p>
+
+  <div class="images">
+    <img src="https://i.imgur.com/DEpRv1E.jpg" alt="PS5 Console"/>
+    <img src="https://i.imgur.com/AFIqlwl.jpg" alt="PS5 Controller"/>
+    <img src="https://i.imgur.com/jLTB2vL.jpg" alt="PS5 Bundle"/>
+    <img src="https://i.imgur.com/xrxEVNV.jpg" alt="PS5 Setup"/>
+  </div>
+
+  <div class="upi-box">
     <h2>Donate via UPI</h2>
-    <input type="text" value="rahul173558@oksbi" id="upi" readonly onclick="copyUPI()">
+    <input type="text" value="rahul173558@oksbi" id="upi" readonly>
+    <br/>
     <button onclick="copyUPI()">Tap to Copy UPI ID</button>
-    <p>Thank you for your support! ❤️</p>
-  </div>  <footer>
-    <p>Made with ❤️ by Rhoxeet. Every share counts!</p>
-  </footer>  <script>
+    <p class="footer">Thank you for your support! ❤️</p>
+  </div>
+
+  <script>
     function copyUPI() {
-      const upi = document.getElementById("upi");
-      upi.select();
-      upi.setSelectionRange(0, 99999); // For mobile
-      navigator.clipboard.writeText(upi.value).then(() => {
-        alert("UPI ID copied to clipboard! 🎉");
-      });
+      const upiInput = document.getElementById("upi");
+      upiInput.select();
+      upiInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("UPI ID copied: " + upiInput.value);
     }
-  </script></body>
+  </script>
+
+</body>
 </html>
